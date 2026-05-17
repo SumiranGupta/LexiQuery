@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Node
+node_modules/
+react-frontend/node_modules/
+react-frontend/dist/
+react-frontend/.vite/
+
+# Environment
+.env
+.venv/
+venv/
+env/
+
+# Data (keep directories, ignore contents)
+data/uploads/*
+!data/uploads/.gitkeep
+data/vectorstore/*
+!data/vectorstore/.gitkeep
+data/analytics/*
+!data/analytics/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Old prototype files (superseded by enterprise architecture)
+# main.py
+# frontend.py
+# rag_pipeline.py
+# vector_database.py
+# pdfs/
+# vectorstore/
