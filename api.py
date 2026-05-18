@@ -44,8 +44,8 @@ app = FastAPI(title="LexiQuery API", version="2.0.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:3000", "http://127.0.0.1:5173"],
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -54,7 +54,7 @@ app.add_middleware(
 # ── Pydantic models ────────────────────────────────────────────────
 class AskRequest(BaseModel):
     question: str
-    top_k: int = 5
+    top_k: int = 20
 
 
 # ── Stats & Analytics ──────────────────────────────────────────────
