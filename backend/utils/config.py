@@ -27,8 +27,8 @@ for _dir in [UPLOADS_DIR, VECTORSTORE_DIR, ANALYTICS_DIR]:
     _dir.mkdir(parents=True, exist_ok=True)
 
 # ── Embedding Configuration ─────────────────────────────────────────
-EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "all-MiniLM-L6-v2")
-EMBEDDING_DEVICE = os.getenv("EMBEDDING_DEVICE", "cpu")
+EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
+EMBEDDING_DEVICE = os.getenv("EMBEDDING_DEVICE", "cpu")  # kept for backward compat
 
 # ── LLM Configuration ───────────────────────────────────────────────
 GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
